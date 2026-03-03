@@ -8,7 +8,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
  
-@Service("supplierArrayListService")
+
+@Service("supplierServiceImplArraylist")
+
 public class SupplierServiceImplArraylist implements SupplierService {
  
     public final List<Supplier> s = new ArrayList<>();
