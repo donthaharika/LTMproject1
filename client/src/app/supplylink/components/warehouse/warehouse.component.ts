@@ -15,7 +15,7 @@ export class WarehouseComponent implements OnInit {
       warehouseName: new FormControl('', Validators.required),
       location: new FormControl(''),
       capacity: new FormControl('', [Validators.required, Validators.min(0)])
-    });
+    }); //
   }
 
   onSubmit() {
