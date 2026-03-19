@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -10,6 +11,7 @@ import { SupplyLinkModule } from './supplylink/supplylink.module';
 
 // Auth interceptor
 import { AuthInterceptor } from './auth.interceptors';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,7 +19,8 @@ import { AuthInterceptor } from './auth.interceptors';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    SupplyLinkModule
+    SupplyLinkModule,
+    SharedModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
